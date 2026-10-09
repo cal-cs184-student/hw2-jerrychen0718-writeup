@@ -183,7 +183,7 @@
 	<body>
 		<div class="container">
 		<h1>CS184/284A Fall 2026 Homework 2 Write-Up</h1>
-		<div style="text-align: center;">Names: </div>
+		<div style="text-align: center;">Names: Yufu Chen </div>
 
 		<br>
 
@@ -194,8 +194,8 @@
 		Link to GitHub repository: <a href="https://github.com/cal-cs184-student/hw2-jerrychen0718-writeup">https://github.com/cal-cs184-student/hw2-jerrychen0718-writeup</a>
 
 		<figure>
-			<img src="assets/teapot.png" alt="Teapot" style="width:50%"/>
-			<figcaption>You can add images with captions!</figcaption>
+			<img src="assets/Temple.png" style="width:35%"/>
+			<figcaption> Keta wakamiya （Shot during this summer vacation while traveling in Japan）</figcaption>
 		</figure>
 
 		<!--
@@ -568,7 +568,62 @@
 		<p> To isolate topology bugs, I added temporary progress messages after each stage of subdivision: computing old-vertex positions, computing edge-associated positions, splitting all original edges, and flipping eligible new edges. I also checked several mesh invariants, including whether every triangular face formed a three-half-edge cycle, whether twins were mutually consistent, and whether every edge's representative half-edge actually referenced that edge. These checks made it much easier to distinguish slow computation from an invalid topology that caused the renderer to traverse indefinitely. </p>
 
 		<h2>(Optional) Section III: Potential Extra Credit - Art Competition: Model something Creative</h2>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+		<p> For the art competition, I created a low-poly character inspired by Naruto in Blender. I started from a simple humanoid structure and added additional details including spiky hair, a forehead protector, clothing, shoes, and other character-specific features. I also assigned colors and materials in Blender to better present the final character design. </p>
+
+		<table class="multi-table">
+			<tr>
+				<td>
+					<img src="assets/naruto_blender_front.png"
+						alt="Front view of the colored Naruto-inspired model in Blender">
+					<figcaption>
+						Front view of the final colored model in Blender.
+					</figcaption>
+				</td>
+
+				<td>
+					<img src="assets/naruto_blender_back.png"
+						alt="Back view of the colored Naruto-inspired model in Blender">
+					<figcaption>
+						Back view of the final colored model in Blender.
+					</figcaption>
+				</td>
+			</tr>
+		</table>
+
+		<p> I then exported a geometry-only version of the model as a COLLADA mesh and loaded it into MeshEdit. The following images show the original low-poly mesh and the results after one and two rounds of Loop subdivision. </p>
+
+		<table class="multi-table">
+			<tr>
+				<td>
+					<img src="assets/naruto_original.png"
+						alt="Original Naruto-inspired mesh in MeshEdit">
+					<figcaption>
+						Original low-poly mesh loaded into MeshEdit.
+					</figcaption>
+				</td>
+
+				<td>
+					<img src="assets/naruto_loop1.png"
+						alt="Naruto-inspired mesh after one Loop subdivision">
+					<figcaption>
+						Mesh after one round of Loop subdivision.
+					</figcaption>
+				</td>
+			</tr>
+		</table>
+
+		<figure>
+			<img src="assets/naruto_loop2.png"
+				alt="Naruto-inspired mesh after two Loop subdivisions"
+				class="medium-image">
+			<figcaption>
+				Mesh after two rounds of Loop subdivision.
+			</figcaption>
+		</figure>
+
+		<p> As subdivision is applied, the body, head, arms, and legs become smoother and more rounded. Sharp features such as the hair spikes also become softer because Loop subdivision is a smoothing scheme. This shows how the topology and geometry of the original low-poly model affect the final subdivided surface. </p>
+
 
 		</div>
 	</body>
